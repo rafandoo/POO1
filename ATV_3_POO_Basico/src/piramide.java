@@ -1,4 +1,4 @@
-
+//RAFAEL CAMARGO
 public class piramide {
 	private double h,ab,apot,base,lateral,vol;
 	private float plt=4.76f;
@@ -70,6 +70,4 @@ public class piramide {
 		}
 		return this.tt;
 	}
-		
-	//https://brasilescola.uol.com.br/matematica/area-piramide.htm
 }
