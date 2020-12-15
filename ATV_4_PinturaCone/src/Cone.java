@@ -106,6 +106,7 @@ public class Cone {
 		return (new DecimalFormat("#,##0.00").format(n));
 	}
 	
+	//------------------------------SAIDA
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
@@ -133,13 +134,5 @@ public class Cone {
 		builder.append("\nPreco total: R$ ");
 		builder.append(precoT());
 		return builder.toString();
-	}
-	
-	
-	
-	
-
-	
-	
-	
+	}	
 }
