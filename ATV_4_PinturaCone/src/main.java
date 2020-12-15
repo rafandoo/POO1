@@ -29,18 +29,6 @@ public class main {
 		
 		Cone c6 = new Cone(18.7,23.8,3);
 		System.out.println(c6);
-		
-		/*Cone c2 = new Cone(3.5);
-		c2.setH(9.0);
-		c2.setTt(2);
-		
-		Cone c3 = new Cone(20.0,13.9);
-		c3.setTt(2);
-		System.out.println(c3);
-		
-		Cone c4 = new Cone(37.78,16.56,3);
-		System.out.println(c4);*/
-		
 	}
 
 }

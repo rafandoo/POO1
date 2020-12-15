@@ -109,7 +109,8 @@ public class Cone {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("\n-Cone \nAltura: ");
+		builder.append("\n=== Pintura Cone ===");
+		builder.append("\nAltura: ");
 		builder.append(h);
 		builder.append("\nRaio: ");
 		builder.append(r);
@@ -117,7 +118,7 @@ public class Cone {
 		builder.append(tt);
 		builder.append("\nGeratriz: ");
 		builder.append(geratriz());
-		builder.append("\nArea da ase: ");
+		builder.append("\nArea da base: ");
 		builder.append(areaB());
 		builder.append("\nArea lateral: ");
 		builder.append(areaL());
