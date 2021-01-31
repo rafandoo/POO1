@@ -1,4 +1,4 @@
-package pessoas;
+package atv1_pessoa;
 
 public class PessoaJuridica extends Pessoa{
 	
