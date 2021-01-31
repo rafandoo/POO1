@@ -65,11 +65,11 @@ public class main {
 		vhs2.setTitulo("UFO a invasão");
 		System.out.println(vhs2);
 		
+		VHS vhs3 = new VHS(10, "Filme sobre um futuro distopico", "Fox company", 106.08f);
+		vhs3.setTitulo("Futurama - o filme");
+		System.out.println(vhs3);
 		
-		
-		
-		
-		
+		VHS vhs4 = new VHS(11, "Filme sobre uma familia atrapalhada", "Pixar", 62.75f, "Divertida Familia");
+		System.out.println(vhs4);
 	}
-
 }
