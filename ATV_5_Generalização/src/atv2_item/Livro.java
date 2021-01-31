@@ -24,7 +24,9 @@ public class Livro extends Item{
 		return autor;
 	}
 	public void setAutor(String autor) {
-		this.autor = autor;
+		if(autor.length() > 0) {
+			this.autor = autor;
+		}
 	}
 	
 	//TO_STRING
