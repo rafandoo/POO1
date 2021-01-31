@@ -13,6 +13,13 @@ public class Conta {
 		
 	}
 	
+	public Conta(String banco, int agencia, int numerodaconta, double saldo) {
+		setBanco(banco);
+		setAgencia(agencia);
+		setNumerodaconta(numerodaconta);
+		setSaldo(saldo);
+	}
+	
 	//GETTERS E SETTERS
 	public String getBanco() {
 		return banco;
