@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="ATV_1_Selecao/src"/>
+	<classpathentry kind="src" path="ATV_2_Arrays/src"/>
+	<classpathentry kind="src" path="ATV_3_POO_Basico/src"/>
+	<classpathentry kind="src" path="ATV_4_PinturaCone/src"/>
+	<classpathentry kind="output" path="ATV_1_Selecao/bin"/>
+</classpath>
