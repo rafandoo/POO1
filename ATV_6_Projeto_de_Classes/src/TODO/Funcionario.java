@@ -1,14 +1,19 @@
 package TODO;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Funcionario extends Pessoa{
 
 	//CONSTRUTORES
 	public Funcionario() {
-		super();
+
 	}
 	
 	//ATRIBUTOS
 	private int matricula;
+	
+	private List<Equipamentos> lequip = new ArrayList<Equipamentos>();
 	
 	//GETTERS E SETTERS
 	public int getMatricula() {
@@ -21,11 +26,17 @@ public class Funcionario extends Pessoa{
 	}
 	
 	//METODOS
-	public void getSetor() {
-		
+	public String getSetor(Cargo cargo) {
+		return cargo.toString();
 	}
 	
+	public String verfificasalario(ContaSalario conta) {
+		return conta.toString();
+	}
 	
+	public boolean addEquipamento(Equipamentos equipamento) {
+		return lequip.add(equipamento);
+	}
 	
 	//TO STRING
 	@Override
@@ -33,6 +44,11 @@ public class Funcionario extends Pessoa{
 		StringBuilder builder = new StringBuilder();
 		builder.append("Funcionario [matricula=");
 		builder.append(matricula);
+		for (Equipamentos equipamentos : lequip) {
+			builder.append(equipamentos.toString());
+		}
+		builder.append(", toString()=");
+		builder.append(super.toString());
 		builder.append("]");
 		return builder.toString();
 	}
