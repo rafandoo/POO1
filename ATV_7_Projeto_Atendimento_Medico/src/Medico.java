@@ -15,8 +15,9 @@ public class Medico extends Pessoa{
 	
 	//ATRIBUTOS
 	private int CRM;
-	private List<Especialidade> lesp = new ArrayList<Especialidade>();
-	private List<Pessoa> lpes = new ArrayList<Pessoa>();
+
+	
+
 	
 	//GET E SET
 	public int getCRM() {
@@ -28,20 +29,7 @@ public class Medico extends Pessoa{
 		}
 	}
 	
-	//METODO
-	public boolean addEspecialidade(Especialidade e) {
-		return lesp.add(e);
-	}
-	public boolean addPessoa(Pessoa p) {
-		return lpes.add(p);
-	}
 
-	public void imp(int i) {
-		System.out.println(lesp.get(i));
-		System.out.println(lpes.get(i));
-		
-	}
-	
 	
 	
 	
