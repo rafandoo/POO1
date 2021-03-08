@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 
 public class Medico extends Pessoa{
 
@@ -11,8 +13,9 @@ public class Medico extends Pessoa{
 		setCRM(CRM);
 	}
 	
-	//ATRIBUTO
+	//ATRIBUTOS
 	private int CRM;
+	private List<Especialidade> lesp = new ArrayList<Especialidade>();
 	
 	//GET E SET
 	public int getCRM() {
@@ -22,5 +25,10 @@ public class Medico extends Pessoa{
 		if(CRM > 0){
 			CRM = cRM;
 		}
+	}
+	
+	//METODO
+	public boolean addEspecialidade(Especialidade e) {
+		return lesp.add(e);
 	}
 }
