@@ -15,4 +15,14 @@ public class Atestado extends Consulta{
 	public void emitirAtestado(Atendimento atendimento) {
 		
 	}
+	
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Atestado [CID10=");
+		builder.append(CID10);
+		builder.append("]");
+		return builder.toString();
+	}
+	
 }

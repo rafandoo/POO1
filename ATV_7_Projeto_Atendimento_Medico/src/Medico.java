@@ -10,7 +10,7 @@ public class Medico extends Pessoa{
 	
 	public Medico(String nome, String cpf, int CRM) {
 		super(nome, cpf);
-		setCRM(CRM);
+		this.CRM = CRM;
 	}
 	
 	//ATRIBUTOS
@@ -21,9 +21,9 @@ public class Medico extends Pessoa{
 	public int getCRM() {
 		return CRM;
 	}
-	public void setCRM(int cRM) {
+	public void setCRM(int CRM) {
 		if(CRM > 0){
-			CRM = cRM;
+			this.CRM = CRM;
 		}
 	}
 	
@@ -31,4 +31,22 @@ public class Medico extends Pessoa{
 	public boolean addEspecialidade(Especialidade e) {
 		return lesp.add(e);
 	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Medico [CRM=");
+		builder.append(getCRM());
+		builder.append(", especialidade: ");
+		for (Especialidade especialidade : lesp) {
+			builder.append(lesp);
+		}
+		builder.append(", toString()=");
+		builder.append(super.toString());
+		builder.append("]");
+		return builder.toString();
+	}
+	
+	
+	
 }

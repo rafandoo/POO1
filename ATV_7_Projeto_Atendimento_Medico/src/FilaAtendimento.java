@@ -22,6 +22,15 @@ public class FilaAtendimento {
 	public boolean realiza_atend(Atendimento a) {
 		return LA.remove(a);
 	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("FilaAtendimento [LA=");
+		builder.append(LA);
+		builder.append("]");
+		return builder.toString();
+	}
 	
 	
 }

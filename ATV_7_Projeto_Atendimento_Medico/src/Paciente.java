@@ -23,4 +23,17 @@ public class Paciente extends Pessoa{
 			this.cod_paciente = cod_paciente;
 		}
 	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Paciente [cod_paciente=");
+		builder.append(cod_paciente);
+		builder.append(", toString()=");
+		builder.append(super.toString());
+		builder.append("]");
+		return builder.toString();
+	}
+	
+	
 }

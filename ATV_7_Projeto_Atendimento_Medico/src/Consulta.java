@@ -33,4 +33,18 @@ public class Consulta extends Atendimento {
 		return fim;
 		
 	}
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Consulta [inicio=");
+		builder.append(inicio);
+		builder.append(", fim=");
+		builder.append(fim);
+		builder.append(", toString()=");
+		builder.append(super.toString());
+		builder.append("]");
+		return builder.toString();
+	}
+	
+	
 }
