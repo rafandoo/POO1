@@ -6,7 +6,7 @@ public class main {
 		Atendimento a = new Atendimento();
 		Scanner ent = new Scanner(System.in);
 		Medico m;
-		Pessoa p;
+		Paciente pc;
 
 		
 		int i = 0;
@@ -14,40 +14,53 @@ public class main {
 			System.out.print("OPC: ");
 			int opc = ent.nextInt();
 			switch (opc) {
+			
 			case 0:
-
 				m = new Medico();
-				p = new Pessoa();
-				
 				m.setNome("Rafael");
 				m.setCpf("108");
 				m.setCRM(1);
-
-				a.inserirPrim(m);
-				i++;
+				a.inserirMedico(m);
 				break;
 
 			case 1:
 				m = new Medico();
-				p = new Pessoa();
-				
 				m.setNome("Tulio");
 				m.setCpf("101");
 				m.setCRM(2);
-
-				a.inserirPrim(m);
-				i++;
-				break;
-			case 2:
-				System.out.println(a.imprimir());
+				a.inserirMedico(m);
 				break;
 				
+			case 2:
+				pc = new Paciente();
+				pc.setNome("Miguel");
+				pc.setCpf("001");
+				pc.setCod_paciente(6);
+				a.inserirPaciente(pc);
+				break;
+				
+			case 3:
+				pc = new Paciente();
+				pc.setNome("Josi");
+				pc.setCpf("002");
+				pc.setCod_paciente(9);
+				a.inserirPaciente(pc);
+				break;
+				
+			case 4:
+				System.out.println(a.imprimirMed());
+				break;
+				
+			case 5:
+				System.out.println(a.imprimirPac());
+				break;
+
 			default:
-				i=3;
+				i=9999;
 				break;
 			}
 			
-		} while (i != 3);
+		} while (i != 9999);
 
 		
 	}
