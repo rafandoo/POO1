@@ -1,18 +1,15 @@
-import java.util.ArrayList;
-import java.util.List;
-
 
 public class Atendimento {
 
 	public Atendimento() {
-		this.prim = null;
-		this.ult = null;
+		this.prim_med = null;
+		this.ult_med = null;
 	}
 	//ATRIBUTOS
 	private int prioridade;
 	
-	private nodo prim;
-	private nodo ult;
+	private Lista_Medico prim_med;
+	private Lista_Medico ult_med;
 	
 	//GET E SET
 	public int getPrioridade() {
@@ -24,18 +21,18 @@ public class Atendimento {
 		}
 	}
 	
-	public nodo getPrim() {
-		return prim;
+	public Lista_Medico getPrim() {
+		return prim_med;
 	}
-	public void setPrim(nodo prim) {
-		this.prim = prim;
+	public void setPrim(Lista_Medico prim) {
+		this.prim_med = prim;
 	}
 	
-	public nodo getUlt() {
-		return ult;
+	public Lista_Medico getUlt() {
+		return ult_med;
 	}
-	public void setUlt(nodo ult) {
-		this.ult = ult;
+	public void setUlt(Lista_Medico ult) {
+		this.ult_med = ult;
 	}
 	
 	
@@ -70,26 +67,26 @@ public class Atendimento {
 	}
 	
 
-	public boolean ehvazio() {
-		return (this.prim == null);
+	public boolean ehvazio_medico() {
+		return (this.prim_med == null);
 	}
 	
-	public void inserirPrim(Medico m) {
-		nodo nv = new nodo(m);
-		if(this.ehvazio()) {
-			this.ult = nv;
+	public void inserirMedico(Medico m) {
+		Lista_Medico nv = new Lista_Medico(m);
+		if(this.ehvazio_medico()) {
+			this.ult_med = nv;
 		}
-		nv.setProx(this.prim);
-		this.prim = nv;
+		nv.setProx(this.prim_med);
+		this.prim_med = nv;
 	}
 	
 	public String imprimir() {
 
 		String msg = "";
-		if(this.ehvazio()) {
+		if(this.ehvazio_medico()) {
 			msg="A lista está vazia!";
 		} else {
-			nodo atual = this.prim;
+			Lista_Medico atual = this.prim_med;
 			while(atual != null) {
 
 				msg += atual.getM().getNome()+ " | " +atual.getM().getCRM() +" -> ";

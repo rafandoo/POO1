@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
 
 public class Medico extends Pessoa{
 
@@ -13,11 +11,8 @@ public class Medico extends Pessoa{
 		this.CRM = CRM;
 	}
 	
-	//ATRIBUTOS
+	//ATRIBUTO
 	private int CRM;
-
-	
-
 	
 	//GET E SET
 	public int getCRM() {
@@ -30,7 +25,4 @@ public class Medico extends Pessoa{
 	}
 	
 
-	
-	
-	
 }

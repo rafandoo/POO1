@@ -3,7 +3,7 @@ public class Paciente extends Pessoa{
 
 	//CONSTRUTORES
 	public Paciente() {
-		super();
+		this.cod_paciente = 0;
 	}
 	
 	public Paciente(String nome, String cpf, int cod_paciente) {
@@ -24,16 +24,4 @@ public class Paciente extends Pessoa{
 		}
 	}
 
-	@Override
-	public String toString() {
-		StringBuilder builder = new StringBuilder();
-		builder.append("Paciente [cod_paciente=");
-		builder.append(cod_paciente);
-		builder.append(", toString()=");
-		builder.append(super.toString());
-		builder.append("]");
-		return builder.toString();
-	}
-	
-	
 }

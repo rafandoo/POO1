@@ -1,12 +1,11 @@
 
-public class nodo {
+public class Lista_Medico {
 
 	private Medico m;
-	private nodo prox;
+	private Lista_Medico prox;
 	
-	public nodo (Medico m) {
+	public Lista_Medico (Medico m) {
 		this.m = m;
-
 		this.prox = null;
 	}
 	
@@ -17,14 +16,10 @@ public class nodo {
 		this.m = m;
 	}
 	
-
-	
-	public nodo getProx() {
+	public Lista_Medico getProx() {
 		return prox;
 	}
-	public void setProx(nodo prox) {
+	public void setProx(Lista_Medico prox) {
 		this.prox = prox;
 	}
-	
-
 }

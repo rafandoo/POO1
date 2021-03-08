@@ -7,7 +7,7 @@ public class main {
 		Scanner ent = new Scanner(System.in);
 		Medico m;
 		Pessoa p;
-		Especialidade e;
+
 		
 		int i = 0;
 		do {
@@ -15,14 +15,14 @@ public class main {
 			int opc = ent.nextInt();
 			switch (opc) {
 			case 0:
-				e = new Especialidade("Cirurgião");
+
 				m = new Medico();
 				p = new Pessoa();
 				
 				m.setNome("Rafael");
 				m.setCpf("108");
 				m.setCRM(1);
-				m.addEspecialidade(e);
+
 				a.inserirPrim(m);
 				i++;
 				break;
@@ -34,7 +34,7 @@ public class main {
 				m.setNome("Tulio");
 				m.setCpf("101");
 				m.setCRM(2);
-				m.addEspecialidade(null);
+
 				a.inserirPrim(m);
 				i++;
 				break;
