@@ -5,7 +5,7 @@ public class Medico extends Pessoa{
 
 	//CONSTRRUTORES
 	public Medico() {
-		super();
+		this.CRM = 0;
 	}
 	
 	public Medico(String nome, String cpf, int CRM) {
@@ -16,6 +16,7 @@ public class Medico extends Pessoa{
 	//ATRIBUTOS
 	private int CRM;
 	private List<Especialidade> lesp = new ArrayList<Especialidade>();
+	private List<Pessoa> lpes = new ArrayList<Pessoa>();
 	
 	//GET E SET
 	public int getCRM() {
@@ -31,21 +32,16 @@ public class Medico extends Pessoa{
 	public boolean addEspecialidade(Especialidade e) {
 		return lesp.add(e);
 	}
-
-	@Override
-	public String toString() {
-		StringBuilder builder = new StringBuilder();
-		builder.append("Medico [CRM=");
-		builder.append(getCRM());
-		builder.append(", especialidade: ");
-		for (Especialidade especialidade : lesp) {
-			builder.append(lesp);
-		}
-		builder.append(", toString()=");
-		builder.append(super.toString());
-		builder.append("]");
-		return builder.toString();
+	public boolean addPessoa(Pessoa p) {
+		return lpes.add(p);
 	}
+
+	public void imp(int i) {
+		System.out.println(lesp.get(i));
+		System.out.println(lpes.get(i));
+		
+	}
+	
 	
 	
 	

@@ -1,35 +1,56 @@
 
+import java.util.Scanner;
 public class main {
 
 	public static void main(String [] args) {
-
-
-		Paciente pc = new Paciente();
-		pc.setNome("Rafa");
-		pc.setCpf("10875");
-		pc.setCod_paciente(10);
-		System.out.println(pc);
-		
-		Medico m = new Medico("BOB", "10144", 20);
-		Especialidade e = new Especialidade("Cirurgiao");
-		m.addEspecialidade(e);
-		System.out.println(m);
-		
 		Atendimento a = new Atendimento();
-		a.def_prioridade(1, 1, 1, 1);
-
-		System.out.println(a);
+		Scanner ent = new Scanner(System.in);
+		Medico m;
+		Pessoa p;
+		Especialidade e;
 		
+		int i = 0;
+		do {
+			System.out.print("OPC: ");
+			int opc = ent.nextInt();
+			switch (opc) {
+			case 0:
+				e = new Especialidade("Cirurgião");
+				m = new Medico();
+				p = new Pessoa();
+				
+				m.setNome("Rafael");
+				m.setCpf("108");
+				m.setCRM(1);
+				m.addEspecialidade(e);
+				a.inserirPrim(m);
+				i++;
+				break;
 
-		FilaAtendimento fa = new FilaAtendimento();
-		
-		fa.addFila(a);
-		fa.mostraFila();
-		System.out.println(fa);
+			case 1:
+				m = new Medico();
+				p = new Pessoa();
+				
+				m.setNome("Tulio");
+				m.setCpf("101");
+				m.setCRM(2);
+				m.addEspecialidade(null);
+				a.inserirPrim(m);
+				i++;
+				break;
+			case 2:
+				System.out.println(a.imprimir());
+				break;
+				
+			default:
+				i=3;
+				break;
+			}
+			
+		} while (i != 3);
+
 		
 	}
-	
-	
-	
-	
 }
+		
+		

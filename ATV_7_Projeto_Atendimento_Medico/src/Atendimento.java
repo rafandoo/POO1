@@ -1,8 +1,18 @@
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class Atendimento {
 
+	public Atendimento() {
+		this.prim = null;
+		this.ult = null;
+	}
 	//ATRIBUTOS
 	private int prioridade;
+	
+	private nodo prim;
+	private nodo ult;
 	
 	//GET E SET
 	public int getPrioridade() {
@@ -13,6 +23,22 @@ public class Atendimento {
 			this.prioridade = prioridade;
 		}
 	}
+	
+	public nodo getPrim() {
+		return prim;
+	}
+	public void setPrim(nodo prim) {
+		this.prim = prim;
+	}
+	
+	public nodo getUlt() {
+		return ult;
+	}
+	public void setUlt(nodo ult) {
+		this.ult = ult;
+	}
+	
+	
 	
 	//METODOS
 	public void def_prioridade(int r1, int r2, int r3, int r4) {
@@ -43,14 +69,35 @@ public class Atendimento {
 		
 	}
 	
-	@Override
-	public String toString() {
-		StringBuilder builder = new StringBuilder();
-		builder.append("Atendimento [prioridade=");
-		builder.append(prioridade);
-		builder.append("]");
-		return builder.toString();
+
+	public boolean ehvazio() {
+		return (this.prim == null);
 	}
 	
+	public void inserirPrim(Medico m) {
+		nodo nv = new nodo(m);
+		if(this.ehvazio()) {
+			this.ult = nv;
+		}
+		nv.setProx(this.prim);
+		this.prim = nv;
+	}
+	
+	public String imprimir() {
+
+		String msg = "";
+		if(this.ehvazio()) {
+			msg="A lista está vazia!";
+		} else {
+			nodo atual = this.prim;
+			while(atual != null) {
+
+				msg += atual.getM().getNome()+ " | " +atual.getM().getCRM() +" -> ";
+				atual = atual.getProx();
+			}
+		}
+
+		return msg;
+	}
 	
 }
