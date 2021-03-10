@@ -12,7 +12,7 @@ public class Atestado extends Consulta{
 		CID10 = cID10;
 	}
 	
-	public void emitirAtestado(Atendimento atendimento) {
+	public void emitirAtestado(Cadastros cadastros) {
 		
 	}
 	

@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class main {
 
 	public static void main(String [] args) {
-		Atendimento a = new Atendimento();
+		Cadastros a = new Cadastros();
 		Scanner ent = new Scanner(System.in);
 		Medico m;
 		Paciente pc;

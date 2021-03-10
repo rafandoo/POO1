@@ -4,17 +4,17 @@ import java.util.List;
 public class HistoricoAtendimento {
 
 	//LISTA
-	private List<Atendimento> hi = new ArrayList<Atendimento>();
+	private List<Cadastros> hi = new ArrayList<Cadastros>();
 	
 	//METODOS
-	public boolean addHist(Atendimento a) {
+	public boolean addHist(Cadastros a) {
 		return hi.add(a);
 	}
 	
 	public String mostraHist() {
 		String msg = "";
-		for (Atendimento atendimento : hi) {
-			msg += atendimento;
+		for (Cadastros cadastros : hi) {
+			msg += cadastros;
 		}
 		return msg;		
 	}

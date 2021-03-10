@@ -1,6 +1,6 @@
 import java.util.Date;
 
-public class Consulta extends Atendimento {
+public class Consulta extends Cadastros {
 
 	//CONSTRUTOR
 	public Consulta() {

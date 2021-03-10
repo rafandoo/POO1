@@ -1,36 +1,25 @@
-import java.util.ArrayList;
-import java.util.List;
 
 public class FilaAtendimento {
 
-	//LISTA
-	private List<Atendimento> LA = new ArrayList<Atendimento>();
+	private Atendimento a;
+	private FilaAtendimento prox;
 	
-	//METODOS
-	public boolean addFila(Atendimento a) {
-		return LA.add(a);
+	public FilaAtendimento(Atendimento a) {
+		this.a = a;
+		this.prox = null;
 	}
 	
-	public String mostraFila() {
-		String msg = "";
-		for (Atendimento atendimento : LA) {
-			msg += atendimento;
-		}
-		return msg;
+	public Atendimento getA() {
+		return a;
+	}
+	public void setA(Atendimento a) {
+		this.a = a;
 	}
 	
-	public boolean realiza_atend(Atendimento a) {
-		return LA.remove(a);
+	public FilaAtendimento getProx() {
+		return prox;
 	}
-
-	@Override
-	public String toString() {
-		StringBuilder builder = new StringBuilder();
-		builder.append("FilaAtendimento [LA=");
-		builder.append(LA);
-		builder.append("]");
-		return builder.toString();
+	public void setProx(FilaAtendimento prox) {
+		this.prox = prox;
 	}
-	
-	
 }
