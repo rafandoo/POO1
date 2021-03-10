@@ -1,50 +1,22 @@
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Consulta extends Cadastros {
+public class Consulta extends Atendimento {
 
-	//CONSTRUTOR
-	public Consulta() {
-		this.fim = null;
-		this.inicio = null;
-	}
-	//ATRIBUTOS
-	private Date inicio;
-	private Date fim;
+	Date data_inicio = new Date();
+	Date data_fim = new Date();
+	SimpleDateFormat formatar = new SimpleDateFormat("hh:mm");
 	
-	//GETTERS E SETTERS
-	public Date getInicio() {
-		return inicio;
-	}
-	public void setInicio(Date inicio) {
-		this.inicio = inicio;
+	@SuppressWarnings("deprecation")
+	public void setInicio(int h, int m) {
+		data_inicio.setHours(h);
+		data_inicio.setMinutes(m);
 	}
 	
-	public Date getFim() {
-		return fim;
+	@SuppressWarnings("deprecation")
+	public void setFim(int h, int m) {
+		data_fim.setHours(h);
+		data_fim.setMinutes(m);
 	}
-
-	public void setFim(int fim) {
-		this.fim.setTime(fim);
-
-	}
-	
-	//METODOS 
-	public Date tempo_atend() {
-		return fim;
-		
-	}
-	@Override
-	public String toString() {
-		StringBuilder builder = new StringBuilder();
-		builder.append("Consulta [inicio=");
-		builder.append(inicio);
-		builder.append(", fim=");
-		builder.append(fim);
-		builder.append(", toString()=");
-		builder.append(super.toString());
-		builder.append("]");
-		return builder.toString();
-	}
-	
 	
 }

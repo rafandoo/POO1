@@ -1,6 +1,7 @@
 
 public class Cadastros {
 
+	//CONSTRUTOR
 	public Cadastros() {
 		this.prim_med = null;
 		this.ult_med = null;
@@ -8,6 +9,7 @@ public class Cadastros {
 		this.prim_pac = null;
 		this.ult_pac = null;
 	}
+	
 	//ATRIBUTOS
 	private Lista_Medico prim_med;
 	private Lista_Medico ult_med;
@@ -16,7 +18,6 @@ public class Cadastros {
 	private Lista_Paciente ult_pac;
 	
 	//GETTERS E SETTERS
-	
 	public Lista_Medico getPrim_med() {
 		return prim_med;
 	}
@@ -58,9 +59,17 @@ public class Cadastros {
 		lm.setProx(this.prim_med);
 		this.prim_med = lm;
 	}
+
+	public String pesquisaMedico(String CRM) {
+		Lista_Medico atual = this.prim_med;
+		while((atual != null) && (!atual.getM().getCRM().equals(CRM))) {
+			atual = atual.getProx();
+		}
+		return (atual.getM().getNome()); //RETORNA O VALOR DA MESA
+	}
 	
 	public boolean ehvazio_paciente() {
-		return (this.prim_med == null);
+		return (this.prim_pac == null);
 	}
 	
 	public void inserirPaciente(Paciente p) {
@@ -71,7 +80,15 @@ public class Cadastros {
 		lp.setProx(this.prim_pac);
 		this.prim_pac = lp;
 	}
-		
+
+	public String pesquisaPaciente(String nome) {
+		Lista_Paciente atual = this.prim_pac;
+		while((atual != null) && (!atual.getP().getNome().equals(nome))) {
+			atual = atual.getProx();
+		}
+		return (atual.getP().getNome()); //RETORNA O VALOR DA MESA
+	}
+	
 	public String imprimirMed() {
 		String msg = "";
 		if(this.ehvazio_medico()) {

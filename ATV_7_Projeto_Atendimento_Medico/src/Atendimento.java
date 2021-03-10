@@ -1,15 +1,48 @@
 
 public class Atendimento {
 	
+	//CONSTRUTOR
+	public Atendimento() {
+		this.prim = null;
+		this.ult = null;		
+	}
+	
 	//ATRIBUTOS
 	private int prioridade;
+	private String pac;
 	
+	
+	private FilaAtendimento prim;
+	private FilaAtendimento ult;
+	
+
 	//GETTERS E SETTERS
-	public int getPrioridade() {
+ 	public int getPrioridade() {
 		return prioridade;
 	}
 	public void setPrioridade(int prioridade) {
 		this.prioridade = prioridade;
+	}
+	
+	public String getPac() {
+		return pac;
+	}
+	public void setPac(String pac) {
+		this.pac = pac;
+	}
+	
+	public FilaAtendimento getPrim() {
+		return prim;
+	}
+	public void setPrim(FilaAtendimento prim) {
+		this.prim = prim;
+	}
+	
+	public FilaAtendimento getUlt() {
+		return ult;
+	}
+	public void setUlt(FilaAtendimento ult) {
+		this.ult = ult;
 	}
 	
 	//METODOS
@@ -39,4 +72,41 @@ public class Atendimento {
 		}	
 	}
 	
+	public boolean ehvazio() {
+		return (this.prim == null);
+	}
+	
+	
+	public void normal(Atendimento a) {
+		FilaAtendimento fa = new FilaAtendimento(a);
+		if(this.ehvazio()) {
+			this.ult = fa;
+		}
+		fa.setProx(this.prim);
+		this.prim = fa;
+	}
+	
+	public void emergencial(Atendimento a) {
+		FilaAtendimento fa = new FilaAtendimento(a);
+		if(this.ehvazio()) {
+			this.prim = fa; 
+		} else {
+			this.ult.setProx(fa);
+		}
+		this.ult = fa;
+	}
+	
+	public String imprimirFila() {
+		String msg = "";
+		if(this.ehvazio()) {
+			msg="A lista está vazia!";
+		} else {
+			FilaAtendimento atual = this.prim;
+			while(atual != null) {
+				msg += atual.getA().getPac() + " -> ";
+				atual = atual.getProx();
+			}
+		}
+		return msg;
+	}
 }

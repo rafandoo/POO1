@@ -3,26 +3,24 @@ public class Medico extends Pessoa{
 
 	//CONSTRRUTORES
 	public Medico() {
-		this.CRM = 0;
+		this.CRM = "";
 	}
 	
-	public Medico(String nome, String cpf, int CRM) {
+	public Medico(String nome, String cpf, String CRM) {
 		super(nome, cpf);
 		this.CRM = CRM;
 	}
 	
 	//ATRIBUTO
-	private int CRM;
+	private String CRM;
 	
 	//GET E SET
-	public int getCRM() {
+	public String getCRM() {
 		return CRM;
 	}
-	public void setCRM(int CRM) {
-		if(CRM > 0){
+	public void setCRM(String CRM) {
+		if(CRM.length() > 0){
 			this.CRM = CRM;
 		}
 	}
-	
-
 }
