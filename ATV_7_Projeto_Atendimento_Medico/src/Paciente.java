@@ -3,7 +3,7 @@ public class Paciente extends Pessoa{
 
 	//CONSTRUTORES
 	public Paciente() {
-		this.cod_paciente = 0;
+
 	}
 	
 	public Paciente(String nome, String cpf, int cod_paciente) {
@@ -23,5 +23,4 @@ public class Paciente extends Pessoa{
 			this.cod_paciente = cod_paciente;
 		}
 	}
-
 }

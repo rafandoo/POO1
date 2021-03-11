@@ -1,9 +1,9 @@
 
 public class Medico extends Pessoa{
 
-	//CONSTRRUTORES
+	//CONSTRUTORES
 	public Medico() {
-		this.CRM = "";
+		
 	}
 	
 	public Medico(String nome, String cpf, String CRM) {

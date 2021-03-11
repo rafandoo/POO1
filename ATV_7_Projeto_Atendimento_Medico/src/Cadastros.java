@@ -47,11 +47,11 @@ public class Cadastros {
 	}
 	
 	//METODOS
-	public boolean ehvazio_medico() {
+	public boolean ehvazio_medico() { //CHECA SE A FILA ESTA VAZIA
 		return (this.prim_med == null);
 	}
 	
-	public void inserirMedico(Medico m) {
+	public void inserirMedico(Medico m) { //CADASTRA UM MEDICO
 		Lista_Medico lm = new Lista_Medico(m);
 		if(this.ehvazio_medico()) {
 			this.ult_med = lm;
@@ -60,7 +60,7 @@ public class Cadastros {
 		this.prim_med = lm;
 	}
 
-	public String pesquisaMedico(String CRM) {
+	public String pesquisaMedico(String CRM) { //PESQUISA UM MEDICO
 		Lista_Medico atual = this.prim_med;
 		while((atual != null) && (!atual.getM().getCRM().equals(CRM))) {
 			atual = atual.getProx();
@@ -68,11 +68,11 @@ public class Cadastros {
 		return (atual.getM().getNome()); //RETORNA O VALOR DA MESA
 	}
 	
-	public boolean ehvazio_paciente() {
+	public boolean ehvazio_paciente() { //CHECA SE A FILA ESTA VAZIA
 		return (this.prim_pac == null);
 	}
 	
-	public void inserirPaciente(Paciente p) {
+	public void inserirPaciente(Paciente p) { //CADASTRA UM PACIENTE
 		Lista_Paciente lp = new Lista_Paciente(p);
 		if(this.ehvazio_paciente()) {
 			this.ult_pac = lp;
@@ -81,7 +81,7 @@ public class Cadastros {
 		this.prim_pac = lp;
 	}
 
-	public String pesquisaPaciente(String nome) {
+	public String pesquisaPaciente(String nome) { //PESQUISA UM PACIENTE
 		Lista_Paciente atual = this.prim_pac;
 		while((atual != null) && (!atual.getP().getNome().equals(nome))) {
 			atual = atual.getProx();
@@ -89,7 +89,7 @@ public class Cadastros {
 		return (atual.getP().getNome()); //RETORNA O VALOR DA MESA
 	}
 	
-	public String imprimirMed() {
+	public String imprimirMed() { //MOSTRA A LISTA DE MEDICOS CADASTRADOS
 		String msg = "";
 		if(this.ehvazio_medico()) {
 			msg="A lista está vazia!";
@@ -103,7 +103,7 @@ public class Cadastros {
 		return msg;
 	}
 	
-	public String imprimirPac() {
+	public String imprimirPac() { //MOSTRA A LISTA DE PACIENTES CADASTRADOS
 		String msg = "";
 		if(this.ehvazio_paciente()) {
 			msg = "A lista está vazia!";
@@ -115,6 +115,5 @@ public class Cadastros {
 			}
 		}
 		return msg;
-	}
-	
+	}	
 }

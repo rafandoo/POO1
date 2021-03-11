@@ -1,14 +1,17 @@
 
 public class FilaAtendimento {
 
-	private Atendimento a;
-	private FilaAtendimento prox;
-	
+	//CONSTRUTOR
 	public FilaAtendimento(Atendimento a) {
 		this.a = a;
 		this.prox = null;
 	}
 	
+	//ATRIBUTOS
+	private Atendimento a;
+	private FilaAtendimento prox;
+	
+	//GETTERS E SETTERS
 	public Atendimento getA() {
 		return a;
 	}
@@ -21,5 +24,5 @@ public class FilaAtendimento {
 	}
 	public void setProx(FilaAtendimento prox) {
 		this.prox = prox;
-	}
+	}	
 }

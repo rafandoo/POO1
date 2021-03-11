@@ -1,20 +1,9 @@
 
-public class Atendimento {
-	
-	//CONSTRUTOR
-	public Atendimento() {
-		this.prim = null;
-		this.ult = null;		
-	}
+public class Atendimento { 
 	
 	//ATRIBUTOS
 	private int prioridade;
-	private String pac;
-	
-	
-	private FilaAtendimento prim;
-	private FilaAtendimento ult;
-	
+	private String paciente_asr;
 
 	//GETTERS E SETTERS
  	public int getPrioridade() {
@@ -24,29 +13,15 @@ public class Atendimento {
 		this.prioridade = prioridade;
 	}
 	
-	public String getPac() {
-		return pac;
+	public String getPaciente_asr() {
+		return paciente_asr;
 	}
-	public void setPac(String pac) {
-		this.pac = pac;
+	public void setPaciente_asr(String pac_sol) {
+		this.paciente_asr = pac_sol;
 	}
-	
-	public FilaAtendimento getPrim() {
-		return prim;
-	}
-	public void setPrim(FilaAtendimento prim) {
-		this.prim = prim;
-	}
-	
-	public FilaAtendimento getUlt() {
-		return ult;
-	}
-	public void setUlt(FilaAtendimento ult) {
-		this.ult = ult;
-	}
-	
+		
 	//METODOS
-	public void def_prioridade(int r1, int r2, int r3, int r4) {
+	public void def_prioridade(int r1, int r2, int r3, int r4) { //METODO PARA DEFINIÇÃO DE PRIORIDADE CONFORME TRIAGEM
 		int tt = 0;
 		if(r1 == 1) {
 			tt++;
@@ -70,43 +45,5 @@ public class Atendimento {
 		} else if(tt == 1 || tt == 0) {
 			setPrioridade(4);
 		}	
-	}
-	
-	public boolean ehvazio() {
-		return (this.prim == null);
-	}
-	
-	
-	public void normal(Atendimento a) {
-		FilaAtendimento fa = new FilaAtendimento(a);
-		if(this.ehvazio()) {
-			this.ult = fa;
-		}
-		fa.setProx(this.prim);
-		this.prim = fa;
-	}
-	
-	public void emergencial(Atendimento a) {
-		FilaAtendimento fa = new FilaAtendimento(a);
-		if(this.ehvazio()) {
-			this.prim = fa; 
-		} else {
-			this.ult.setProx(fa);
-		}
-		this.ult = fa;
-	}
-	
-	public String imprimirFila() {
-		String msg = "";
-		if(this.ehvazio()) {
-			msg="A lista está vazia!";
-		} else {
-			FilaAtendimento atual = this.prim;
-			while(atual != null) {
-				msg += atual.getA().getPac() + " -> ";
-				atual = atual.getProx();
-			}
-		}
-		return msg;
 	}
 }

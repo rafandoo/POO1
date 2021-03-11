@@ -1,14 +1,17 @@
 
 public class Lista_Medico {
 
-	private Medico m;
-	private Lista_Medico prox;
-	
+	//CONSTRUTOR
 	public Lista_Medico (Medico m) {
 		this.m = m;
 		this.prox = null;
 	}
 	
+	//ATRIBUTOS
+	private Medico m;
+	private Lista_Medico prox;
+	
+	//GETTERS E SETTERS
 	public Medico getM() {
 		return m;
 	}

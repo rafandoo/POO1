@@ -1,14 +1,17 @@
 
 public class Lista_Paciente {
 
-	private Paciente p;
-	private Lista_Paciente prox;
-	
+	//CONSTRUTOR
 	public Lista_Paciente(Paciente p) {
 		this.p = p;
 		this.prox = null;
 	}
 	
+	//ATRIBUTOS
+	private Paciente p;
+	private Lista_Paciente prox;
+	
+	//GETTERS E SETTERS
 	public Paciente getP() {
 		return p;
 	}

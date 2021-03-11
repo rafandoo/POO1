@@ -1,7 +1,7 @@
 
 public class Pessoa {
 
-	//CONSTRUTOR
+	//CONSTRUTORES
 	public Pessoa() {
 		
 	}
@@ -14,7 +14,6 @@ public class Pessoa {
 	//ATRIBUTOS
 	private String nome;
 	private String cpf;
-	//private date data_nasc;
 	
 	//GETTERS E SETTERS
 	public String getNome() {
@@ -34,17 +33,4 @@ public class Pessoa {
 			this.cpf = cpf;
 		}
 	}
-
-	@Override
-	public String toString() {
-		StringBuilder builder = new StringBuilder();
-		builder.append("Pessoa [nome=");
-		builder.append(nome);
-		builder.append(", cpf=");
-		builder.append(cpf);
-		builder.append("]");
-		return builder.toString();
-	}
-	
-	
 }
