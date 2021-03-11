@@ -92,11 +92,11 @@ public class Cadastros {
 	public String imprimirMed() { //MOSTRA A LISTA DE MEDICOS CADASTRADOS
 		String msg = "";
 		if(this.ehvazio_medico()) {
-			msg="A lista está vazia!";
+			msg = "A lista está vazia!";
 		} else {
 			Lista_Medico atual = this.prim_med;
 			while(atual != null) {
-				msg += atual.getM().getNome()+ " | " +atual.getM().getCRM() +" -> ";
+				msg += "Nome: " + atual.getM().getNome()+ " | CRM: " +atual.getM().getCRM() +"\n";
 				atual = atual.getProx();
 			}
 		}
@@ -110,7 +110,7 @@ public class Cadastros {
 		} else {
 			Lista_Paciente atual = this.prim_pac;
 			while(atual != null) {
-				msg += atual.getP().getNome()+ " | " +atual.getP().getCod_paciente() +" -> ";
+				msg += atual.getP().getNome()+ " | " +atual.getP().getCod_paciente() +"\n";
 				atual = atual.getProx();
 			}
 		}

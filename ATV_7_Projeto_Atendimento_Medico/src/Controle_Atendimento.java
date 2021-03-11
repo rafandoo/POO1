@@ -61,12 +61,12 @@ public class Controle_Atendimento {
 	public String imprimirFila() { //MOSTRA A FILA DE ATENDIMENTO
 		String msg = "";
 		if(this.ehvazio()) {
-			msg="A lista está vazia!";
+			msg = "A lista está vazia!";
 		} else {
 			FilaAtendimento atual = this.prim;
 			while(atual != null) {
-				msg += "Nome/Prioridade: " + atual.getA().getPaciente_asr() +" | "+
-						atual.getA().getPrioridade() + " <- ";
+				msg += " Nome/Prioridade: " + atual.getA().getPaciente_asr() +" | "+
+						atual.getA().getPrioridade() + "\n";
 				atual = atual.getProx();
 			}
 		}

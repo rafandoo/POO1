@@ -12,17 +12,8 @@ public class Atestado extends Consulta{
 		CID10 = cID10;
 	}
 	
-	public void emitirAtestado(Cadastros cadastros) {
+	public void emitirAtestado(Controle_Atendimento controle_Atendimento) {
 		
-	}
-	
-	@Override
-	public String toString() {
-		StringBuilder builder = new StringBuilder();
-		builder.append("Atestado [CID10=");
-		builder.append(CID10);
-		builder.append("]");
-		return builder.toString();
 	}
 	
 }
