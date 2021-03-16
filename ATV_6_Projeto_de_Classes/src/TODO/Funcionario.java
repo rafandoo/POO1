@@ -30,7 +30,7 @@ public class Funcionario extends Pessoa{
 		return cargo.toString();
 	}
 	
-	public String verfificasalario(ContaSalario conta) {
+	public String verfificaSalario(ContaSalario conta) {
 		return conta.toString();
 	}
 	

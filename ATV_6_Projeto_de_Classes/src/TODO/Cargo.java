@@ -24,6 +24,4 @@ public class Cargo {
 		builder.append("]");
 		return builder.toString();
 	}
-	
-	
 }

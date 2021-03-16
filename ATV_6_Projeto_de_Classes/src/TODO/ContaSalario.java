@@ -55,5 +55,4 @@ public class ContaSalario {
 		builder.append("]");
 		return builder.toString();
 	}
-	
 }

@@ -23,7 +23,7 @@ public class main {
 		
 		System.out.println(f);
 		System.out.println(f.getSetor(cg));
-		System.out.println(f.verfificasalario(cs));
+		System.out.println(f.verfificaSalario(cs));
 
 	}
 
