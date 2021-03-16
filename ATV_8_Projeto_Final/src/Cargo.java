@@ -1,5 +1,3 @@
-package TODO;
-
 public class Cargo {
 
 	//ATRIBUTOS

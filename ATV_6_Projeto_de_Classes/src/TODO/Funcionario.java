@@ -14,6 +14,7 @@ public class Funcionario extends Pessoa{
 	private int matricula;
 	
 	private List<Equipamentos> lequip = new ArrayList<Equipamentos>();
+	private List<ContaSalario> lconta = new ArrayList<ContaSalario>();
 	
 	//GETTERS E SETTERS
 	public int getMatricula() {
@@ -26,7 +27,7 @@ public class Funcionario extends Pessoa{
 	}
 	
 	//METODOS
-	public String getSetor(Cargo cargo) {
+	public String getSetor(Cargo cargo) { //VER URGENTE
 		return cargo.toString();
 	}
 	
@@ -36,6 +37,10 @@ public class Funcionario extends Pessoa{
 	
 	public boolean addEquipamento(Equipamentos equipamento) {
 		return lequip.add(equipamento);
+	}
+	
+	public boolean addContaSalario(ContaSalario contasalario) {
+		return lconta.add(contasalario);
 	}
 	
 	//TO STRING
