@@ -107,6 +107,7 @@ public class Controle {
 			while(atual != null) {
 				msg +=  atual.getF().getNome() + " | " + atual.getF().getMatricula() + 
 						" | " + atual.getF().mostraConta() + " | " + atual.getF().mostraEquip() +
+						" | " + atual.getF().mostraCargoSetor() +
 						"\n";
 				atual = atual.getProx();
 			}

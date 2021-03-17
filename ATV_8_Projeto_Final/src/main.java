@@ -6,6 +6,8 @@ public class main {
 		Funcionario f;
 		ContaSalario cs;
 		Equipamentos e;
+		Setor s;
+		Cargo cr;
 		Controle c = new Controle();
 		
 		Scanner ent = new Scanner(System.in);
@@ -25,10 +27,18 @@ public class main {
 				f.setNome("Rafael");
 				f.setCpf("108");
 				f.setMatricula(6);
+				
 				cs = new ContaSalario(101, 0001, 3201.1);
 				f.addContaSalario(cs);
+				
 				e = new Equipamentos("oculos", "luva");
 				f.addEquipamento(e);
+				
+				s = Setor.ADMINISTRACAO;
+				cr = new Cargo("AuxADM");
+				cr.setS(s);
+				f.vincularCargoSetor(cr, s);
+				
 				c.inserirPrim(f);
 				break;
 				
@@ -37,9 +47,15 @@ public class main {
 				f.setNome("Tulio");
 				f.setCpf("101");
 				f.setMatricula(2);
+				
 				cs = new ContaSalario(230, 0001, 4250);
 				f.addContaSalario(cs);
 				c.inserirPrim(f);
+				
+				s = Setor.VENDAS;
+				cr = new Cargo("Vendedor");
+				cr.setS(s);
+				f.vincularCargoSetor(cr, s);
 				break;
 				
 			case 3:
