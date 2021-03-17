@@ -52,7 +52,13 @@ public class Funcionario extends Pessoa{
 		return (lconta.get(0));
 	}
 
-	
+	public Equipamentos mostraEquip() {
+		if(lequip.get(0) == null) {
+			return null;
+		} else {
+			return (lequip.get(0));
+		}
+	}
 	
 	
 }

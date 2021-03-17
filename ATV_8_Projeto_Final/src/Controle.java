@@ -1,19 +1,19 @@
 
 public class Controle {
 
-	//
+	//ATRIBUTOS
 	private Nodo prim;
 	private Nodo ult;
 	private int quantNodo;
 	
-	//
+	//CONSTRUTOR
 	public Controle() {
 		this.prim = null;
 		this.ult = null;
 		this.quantNodo = 0;
 	}
 	
-	//
+	//GETTERS E SETTERS
 	public Nodo getPrim() {
 		return prim;
 	}
@@ -35,7 +35,7 @@ public class Controle {
 		this.quantNodo = quantNodo;
 	}
 
-	//
+	//METODOS
 	public boolean ehvazio() {
 		return (this.prim == null);
 	}
@@ -106,7 +106,7 @@ public class Controle {
 			Nodo atual = this.prim;
 			while(atual != null) {
 				msg +=  atual.getF().getNome() + " | " + atual.getF().getMatricula() + 
-						" | " + atual.getF().mostraConta() + " | " +
+						" | " + atual.getF().mostraConta() + " | " + atual.getF().mostraEquip() +
 						"\n";
 				atual = atual.getProx();
 			}
@@ -114,5 +114,4 @@ public class Controle {
 		return msg;
 	}
 	
-
 }

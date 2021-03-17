@@ -5,6 +5,7 @@ public class main {
 		
 		Funcionario f;
 		ContaSalario cs;
+		Equipamentos e;
 		Controle c = new Controle();
 		
 		Scanner ent = new Scanner(System.in);
@@ -26,6 +27,8 @@ public class main {
 				f.setMatricula(6);
 				cs = new ContaSalario(101, 0001, 3201.1);
 				f.addContaSalario(cs);
+				e = new Equipamentos("oculos", "luva");
+				f.addEquipamento(e);
 				c.inserirPrim(f);
 				break;
 				
