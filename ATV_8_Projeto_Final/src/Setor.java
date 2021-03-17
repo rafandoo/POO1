@@ -2,7 +2,7 @@
 public enum Setor {
 	
 	//ENUMS
-	ADMINISTRACAO (1), VENDAS(2), ESTOQUE(4), FABRICACAO(5);
+	ADMINISTRACAO (1), VENDAS(2), ESTOQUE(3), FABRICACAO(4);
 	
 	//ATRIBUTO
 	private final int cod;

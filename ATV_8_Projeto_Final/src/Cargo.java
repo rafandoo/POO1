@@ -1,3 +1,4 @@
+
 public class Cargo {
 
 	//ATRIBUTOS
@@ -17,7 +18,7 @@ public class Cargo {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Cargo [funcao=");
+		builder.append("Cargo [Função: ");
 		builder.append(funcao);
 		builder.append("]");
 		return builder.toString();
