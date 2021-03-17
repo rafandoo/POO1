@@ -4,13 +4,13 @@ public class Controle {
 	//ATRIBUTOS
 	private Nodo prim;
 	private Nodo ult;
-	private int quantNodo;
+	private int quantFuncionario;
 	
 	//CONSTRUTOR
 	public Controle() {
 		this.prim = null;
 		this.ult = null;
-		this.quantNodo = 0;
+		this.quantFuncionario = 0;
 	}
 	
 	//GETTERS E SETTERS
@@ -28,11 +28,11 @@ public class Controle {
 		this.ult = ult;
 	}
 	
-	public int getQuantNodo() {
-		return quantNodo;
+	public int getQuantFuncionario() {
+		return quantFuncionario;
 	}
-	public void setQuantNodo(int quantNodo) {
-		this.quantNodo = quantNodo;
+	public void setQuantFuncionario(int quantFuncionario) {
+		this.quantFuncionario = quantFuncionario;
 	}
 
 	//METODOS
@@ -47,7 +47,7 @@ public class Controle {
 		}
 		nnodo.setProx(this.prim);
 		this.prim = nnodo;
-		this.quantNodo++;
+		this.quantFuncionario++;
 	}
 	
 	public void inserirult(Funcionario f) {
@@ -58,10 +58,10 @@ public class Controle {
 			this.ult.setProx(nnodo);
 		}
 		this.ult = nnodo;
-		this.quantNodo++;
+		this.quantFuncionario++;
 	}
 	
-	public boolean removerNodo(String nome) {
+	/*public boolean removerNodo(String nome) {
 		Nodo atual = this.prim;
 		Nodo ant = null;
 		if(this.ehvazio()) {
@@ -85,9 +85,9 @@ public class Controle {
 			this.quantNodo--;
 			return true;
 		}
-	}
+	}*/
 	
-	public String pesquisarNodo(String nome) {
+	public String pesquisarFuncionario(String nome) {
 		String msg ="";
 		Nodo atual = this.prim;
 		while((atual != null) && (!atual.getF().getNome().equals(nome))) {

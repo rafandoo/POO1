@@ -53,7 +53,7 @@ public class Funcionario extends Pessoa{
 	}
 
 	public Equipamentos mostraEquip() {
-		if(lequip.get(0) == null) {
+		if(lequip.isEmpty()) {
 			return null;
 		} else {
 			return (lequip.get(0));

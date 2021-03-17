@@ -1,6 +1,10 @@
+import java.text.DecimalFormat;
 
 public class ContaSalario {
 
+	//INSTANCIA
+	DecimalFormat formatar = new DecimalFormat("R$ #,##0.00");
+	
 	//CONSTRUTOR
 	public ContaSalario(int num_conta, int agencia, double salario) {
 		setNum_conta(num_conta);
@@ -50,12 +54,12 @@ public class ContaSalario {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("ContaSalario [num_conta=");
+		builder.append("Conta Salario [Numero da conta: ");
 		builder.append(num_conta);
-		builder.append(", agencia=");
+		builder.append(", agencia: ");
 		builder.append(agencia);
-		builder.append(", salario=");
-		builder.append(salario);
+		builder.append(", salario: ");
+		builder.append(formatar.format(salario));
 		builder.append("]");
 		return builder.toString();
 	}

@@ -1,7 +1,12 @@
 
 public class Equipamentos {
 	
-	//CONSTRUTOR
+	//CONSTRUTORES
+	public Equipamentos() {
+		setFerrameta("");
+		setEpi("");
+	}
+	
 	public Equipamentos(String ferramenta, String epi) {
 		setFerrameta(ferramenta);
 		setEpi(epi);
@@ -34,13 +39,11 @@ public class Equipamentos {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Equipamentos [ferrameta=");
+		builder.append("Equipamentos [Ferrameta: ");
 		builder.append(ferrameta);
-		builder.append(", epi=");
+		builder.append(", EPI: ");
 		builder.append(epi);
 		builder.append("]");
 		return builder.toString();
 	}
-	
-	
 }
