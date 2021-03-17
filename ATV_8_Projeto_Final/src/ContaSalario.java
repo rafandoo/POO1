@@ -45,11 +45,6 @@ public class ContaSalario {
 		}
 	}
 	
-	public static double desconto(int a) {
-		return a;
-		
-	}
-	
 	//TO STRING
 	@Override
 	public String toString() {

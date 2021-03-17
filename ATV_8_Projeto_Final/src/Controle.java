@@ -4,13 +4,12 @@ public class Controle {
 	//ATRIBUTOS
 	private Nodo prim;
 	private Nodo ult;
-	private int quantFuncionario;
+	private static int quantFuncionario = 0;
 	
 	//CONSTRUTOR
 	public Controle() {
 		this.prim = null;
 		this.ult = null;
-		this.quantFuncionario = 0;
 	}
 	
 	//GETTERS E SETTERS
@@ -28,11 +27,11 @@ public class Controle {
 		this.ult = ult;
 	}
 	
-	public int getQuantFuncionario() {
+	public static int getQuantFuncionario() {
 		return quantFuncionario;
 	}
-	public void setQuantFuncionario(int quantFuncionario) {
-		this.quantFuncionario = quantFuncionario;
+	public static void setQuantFuncionario(int quantFuncionario) {
+		Controle.quantFuncionario = quantFuncionario;
 	}
 
 	//METODOS
@@ -40,52 +39,16 @@ public class Controle {
 		return (this.prim == null);
 	}
 	
-	public void inserirPrim(Funcionario f) {
+
+	public void cadastrarFuncionario(Funcionario f) {
 		Nodo nnodo = new Nodo(f);
 		if(this.ehvazio()) {
 			this.ult = nnodo;
 		}
 		nnodo.setProx(this.prim);
 		this.prim = nnodo;
-		this.quantFuncionario++;
+		Controle.quantFuncionario++;
 	}
-	
-	public void inserirult(Funcionario f) {
-		Nodo nnodo = new Nodo(f);
-		if(this.ehvazio()) {
-			this.prim = nnodo;
-		} else {
-			this.ult.setProx(nnodo);
-		}
-		this.ult = nnodo;
-		this.quantFuncionario++;
-	}
-	
-	/*public boolean removerNodo(String nome) {
-		Nodo atual = this.prim;
-		Nodo ant = null;
-		if(this.ehvazio()) {
-			return false;
-		} else {
-			while((atual != null)&&(!atual.getF().getNome().equals(nome))) {
-				ant = atual;
-				atual = atual.getProx();
-			}
-			if(atual == this.prim) {
-				if(this.prim == this.ult) {
-					this.ult = null;
-				}
-				this.prim = this.prim.getProx();
-			} else {
-				if(atual == this.ult) {
-					this.ult = ant;
-				}
-				ant.setProx(atual.getProx());
-			}
-			this.quantNodo--;
-			return true;
-		}
-	}*/
 	
 	public String pesquisarFuncionario(String nome) {
 		String msg ="";

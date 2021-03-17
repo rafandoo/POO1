@@ -39,7 +39,7 @@ public class main {
 				cr.setS(s);
 				f.vincularCargoSetor(cr, s);
 				
-				c.inserirPrim(f);
+				c.cadastrarFuncionario(f);
 				break;
 				
 			case 2:
@@ -50,7 +50,7 @@ public class main {
 				
 				cs = new ContaSalario(230, 0001, 4250);
 				f.addContaSalario(cs);
-				c.inserirPrim(f);
+				c.cadastrarFuncionario(f);
 				
 				s = Setor.VENDAS;
 				cr = new Cargo("Vendedor");
@@ -60,6 +60,10 @@ public class main {
 				
 			case 3:
 				System.out.println(c.imprimirLista());
+				break;
+				
+			case 4:
+				System.out.println("\n"+c.getQuantFuncionario());
 				break;
 			
 			default:
