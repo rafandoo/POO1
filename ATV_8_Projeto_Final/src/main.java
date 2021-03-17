@@ -15,11 +15,11 @@ public class main {
 		Equipamentos e1 = new Equipamentos("chave philips", "luva nitrilica");
 		Equipamentos e2 = new Equipamentos("martelo", "oculos");
 		
-		int i;
+		int i = 1;
 
 		do {
-			System.out.print("OPC: ");
-			i = ent.nextInt();
+			//System.out.print("OPC: ");
+			//i = ent.nextInt();
 			switch(i) {
 			
 			case 1:
@@ -40,6 +40,7 @@ public class main {
 				f.vincularCargoSetor(cr, s);
 				
 				c.cadastrarFuncionario(f);
+				i++;
 				break;
 				
 			case 2:
@@ -56,21 +57,24 @@ public class main {
 				cr = new Cargo("Vendedor");
 				cr.setS(s);
 				f.vincularCargoSetor(cr, s);
+				i++;
 				break;
 				
 			case 3:
 				System.out.println(c.imprimirLista());
+				i++;
 				break;
 				
 			case 4:
-				System.out.println("\n"+c.getQuantFuncionario());
+				System.out.println("\n"+Controle.getQuantFuncionario());
+				i++;
 				break;
 			
 			default:
 				System.out.println("erro");
 				break;
 			}
-		} while (i != 9999);
+		} while (i != 5);
 		
 	}
 
