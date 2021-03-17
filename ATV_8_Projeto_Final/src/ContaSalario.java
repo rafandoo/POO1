@@ -1,5 +1,4 @@
 
-
 public class ContaSalario {
 
 	//CONSTRUTOR
@@ -40,6 +39,11 @@ public class ContaSalario {
 		if(salario > 0) {
 			this.salario = salario;
 		}
+	}
+	
+	public static double desconto(int a) {
+		return a;
+		
 	}
 	
 	//TO STRING
