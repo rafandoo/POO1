@@ -1,29 +1,54 @@
-
+import java.util.Scanner;
 public class main {
 
 	public static void main(String[] args) {
 		
-		Cargo cg = new Cargo();
-		cg.setFuncao("Administracao");
+		Funcionario f;
+		ContaSalario cs;
+		Controle c = new Controle();
 		
-		ContaSalario cs = new ContaSalario(1, 0002, 3000.21);
+		Scanner ent = new Scanner(System.in);
 		
 		Equipamentos e1 = new Equipamentos("chave philips", "luva nitrilica");
 		Equipamentos e2 = new Equipamentos("martelo", "oculos");
 		
-		Funcionario f = new Funcionario();
-		
-		f.setCpf("111.111.111-11");
-		f.setNome("Rafael");
-		f.setMatricula(1);
-		f.addEquipamento(e1);
-		f.addEquipamento(e2);
-		
-		
-		System.out.println(f);
-		System.out.println(f.getSetor(cg));
-		System.out.println(f.verfificaSalario(cs));
+		int i;
 
+		do {
+			System.out.print("OPC: ");
+			i = ent.nextInt();
+			switch(i) {
+			
+			case 1:
+				f = new Funcionario();
+				f.setNome("Rafael");
+				f.setCpf("108");
+				f.setMatricula(6);
+				cs = new ContaSalario(101, 0001, 3201.1);
+				f.addContaSalario(cs);
+				c.inserirPrim(f);
+				break;
+				
+			case 2:
+				f = new Funcionario();
+				f.setNome("Tulio");
+				f.setCpf("101");
+				f.setMatricula(2);
+				cs = new ContaSalario(230, 0001, 4250);
+				f.addContaSalario(cs);
+				c.inserirPrim(f);
+				break;
+				
+			case 3:
+				System.out.println(c.imprimirLista());
+				break;
+			
+			default:
+				System.out.println("erro");
+				break;
+			}
+		} while (i != 9999);
+		
 	}
 
 }

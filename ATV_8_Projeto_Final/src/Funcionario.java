@@ -8,10 +8,20 @@ public class Funcionario extends Pessoa{
 
 	}
 	
+	public Funcionario(String nome, String cpf) {
+		super(nome, cpf);
+	}
+	
+	public Funcionario(String nome, String cpf, int matricula) {
+		super(nome, cpf);
+		setMatricula(matricula);
+	}
+	
 	//ATRIBUTOS
 	private int matricula;
 	
 	private List<Equipamentos> lequip = new ArrayList<Equipamentos>();
+	private List<ContaSalario> lconta = new ArrayList<ContaSalario>();
 	
 	//GETTERS E SETTERS
 	public int getMatricula() {
@@ -24,9 +34,7 @@ public class Funcionario extends Pessoa{
 	}
 	
 	//METODOS
-	public String getSetor(Cargo cargo) {
-		return cargo.toString();
-	}
+	
 	
 	public String verfificaSalario(ContaSalario conta) {
 		return conta.toString();
@@ -36,19 +44,15 @@ public class Funcionario extends Pessoa{
 		return lequip.add(equipamento);
 	}
 	
-	//TO STRING
-	@Override
-	public String toString() {
-		StringBuilder builder = new StringBuilder();
-		builder.append("Funcionario [matricula=");
-		builder.append(matricula);
-		for (Equipamentos equipamentos : lequip) {
-			builder.append(equipamentos.toString());
-		}
-		builder.append(", toString()=");
-		builder.append(super.toString());
-		builder.append("]");
-		return builder.toString();
+	public boolean addContaSalario(ContaSalario contasalario) {
+			return (lconta.add(contasalario));
+	}
+	
+	public ContaSalario mostraConta() {
+		return (lconta.get(0));
 	}
 
+	
+	
+	
 }
