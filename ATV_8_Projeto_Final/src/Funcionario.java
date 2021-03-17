@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Funcionario extends Pessoa{
+public class Funcionario extends Pessoa implements Login{
 
 	//CONSTRUTORES
 	public Funcionario() {
@@ -74,6 +74,12 @@ public class Funcionario extends Pessoa{
 	
 	public Cargo mostraCargoSetor() {
 		return this.c;
+	}
+
+	@Override
+	public String usuario() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 }

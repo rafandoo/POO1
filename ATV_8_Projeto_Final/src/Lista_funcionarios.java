@@ -1,10 +1,10 @@
 
-public class Nodo {
+public class Lista_funcionarios {
 
 		private Funcionario f;
-		private Nodo prox;
+		private Lista_funcionarios prox;
 		
-		public Nodo(Funcionario f) {
+		public Lista_funcionarios(Funcionario f) {
 			this.f = f;
 			this.prox = null;
 		}
@@ -16,10 +16,10 @@ public class Nodo {
 			this.f = f;
 		}
 		
-		public Nodo getProx() {
+		public Lista_funcionarios getProx() {
 			return prox;
 		}
-		public void setProx(Nodo prox) {
+		public void setProx(Lista_funcionarios prox) {
 			this.prox = prox;
 		}
 	}

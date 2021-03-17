@@ -2,8 +2,8 @@
 public class Controle {
 
 	//ATRIBUTOS
-	private Nodo prim;
-	private Nodo ult;
+	private Lista_funcionarios prim;
+	private Lista_funcionarios ult;
 	private static int quantFuncionario = 0;
 	
 	//CONSTRUTOR
@@ -13,17 +13,17 @@ public class Controle {
 	}
 	
 	//GETTERS E SETTERS
-	public Nodo getPrim() {
+	public Lista_funcionarios getPrim() {
 		return prim;
 	}
-	public void setPrim(Nodo prim) {
+	public void setPrim(Lista_funcionarios prim) {
 		this.prim = prim;
 	}
 
-	public Nodo getUlt() {
+	public Lista_funcionarios getUlt() {
 		return ult;
 	}
-	public void setUlt(Nodo ult) {
+	public void setUlt(Lista_funcionarios ult) {
 		this.ult = ult;
 	}
 	
@@ -41,18 +41,19 @@ public class Controle {
 	
 
 	public void cadastrarFuncionario(Funcionario f) {
-		Nodo nnodo = new Nodo(f);
+		Lista_funcionarios lf = new Lista_funcionarios(f);
 		if(this.ehvazio()) {
-			this.ult = nnodo;
+			this.ult = lf;
 		}
-		nnodo.setProx(this.prim);
-		this.prim = nnodo;
+		lf.setProx(this.prim);
+		this.prim = lf;
 		Controle.quantFuncionario++;
 	}
 	
 	public String pesquisarFuncionario(String nome) {
-		String msg ="";
-		Nodo atual = this.prim;
+		@SuppressWarnings("unused")
+		String msg = " ";
+		Lista_funcionarios atual = this.prim;
 		while((atual != null) && (!atual.getF().getNome().equals(nome))) {
 			atual = atual.getProx();
 		}
@@ -62,11 +63,11 @@ public class Controle {
 	}
 	
 	public String imprimirLista() {
-		String msg ="";
+		String msg = " ";
 		if(this.ehvazio()) {
 			msg="A lista está vazia!";
 		} else {
-			Nodo atual = this.prim;
+			Lista_funcionarios atual = this.prim;
 			while(atual != null) {
 				msg +=  atual.getF().getNome() + " | " + atual.getF().getMatricula() + 
 						" | " + atual.getF().mostraConta() + " | " + atual.getF().mostraEquip() +

@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class main {
+public class Main {
 
 	public static void main(String[] args) {
 		
@@ -11,9 +11,6 @@ public class main {
 		Controle c = new Controle();
 		
 		Scanner ent = new Scanner(System.in);
-		
-		Equipamentos e1 = new Equipamentos("chave philips", "luva nitrilica");
-		Equipamentos e2 = new Equipamentos("martelo", "oculos");
 		
 		int i = 1;
 
@@ -75,7 +72,7 @@ public class main {
 				break;
 			}
 		} while (i != 5);
-		
+		ent.close();
 	}
 
 }

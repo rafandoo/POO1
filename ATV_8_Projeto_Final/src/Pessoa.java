@@ -33,17 +33,4 @@ public abstract class Pessoa {
 			this.cpf = cpf;
 		}
 	}
-	
-	//TO STRING
-	@Override
-	public String toString() {
-		StringBuilder builder = new StringBuilder();
-		builder.append("Pessoa [nome=");
-		builder.append(nome);
-		builder.append(", cpf=");
-		builder.append(cpf);
-		builder.append("]");
-		return builder.toString();
-	}
-
 }
