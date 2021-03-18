@@ -82,5 +82,4 @@ public class Funcionario extends Pessoa implements Login{
 		// TODO Auto-generated method stub
 		return null;
 	}
-	
 }

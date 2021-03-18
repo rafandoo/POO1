@@ -40,7 +40,6 @@ public class Controle {
 		return (this.prim == null);
 	}
 	
-
 	public void cadastrarFuncionario(Funcionario f) {
 		Lista_funcionarios lf = new Lista_funcionarios(f);
 		if(this.ehvazio()) {
@@ -64,13 +63,14 @@ public class Controle {
 	}
 	
 	public String imprimirLista() {
-		String msg = " ";
+		String msg = "=== Lista de Funcionarios ===\n\n";
 		if(this.ehvazio()) {
 			msg="A lista está vazia!";
 		} else {
 			Lista_funcionarios atual = this.prim;
 			while(atual != null) {
-				msg +=  atual.getF().getNome() + " | " + atual.getF().getMatricula() + 
+				msg +=  "Nome: " + atual.getF().getNome() + 
+						" | " +"Matricula: "+ atual.getF().getMatricula() + 
 						" | " + atual.getF().mostraConta() + " | " + atual.getF().mostraEquip() +
 						" | " + atual.getF().mostraCargoSetor() +
 						"\n";
@@ -79,5 +79,4 @@ public class Controle {
 		}
 		return msg;
 	}
-	
 }

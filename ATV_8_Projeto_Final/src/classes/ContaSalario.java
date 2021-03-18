@@ -46,7 +46,7 @@ public class ContaSalario {
 		}
 	}
 	
-	//TO STRING
+	//TO_STRING
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();

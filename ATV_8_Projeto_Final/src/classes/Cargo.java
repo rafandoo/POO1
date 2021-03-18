@@ -8,7 +8,7 @@ public class Cargo {
 	
 	//CONSTRUTORES
 	public Cargo() {
-		super();
+		
 	}
 	
 	public Cargo(String funcao) {

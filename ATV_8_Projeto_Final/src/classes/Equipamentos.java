@@ -36,7 +36,7 @@ public class Equipamentos {
 		}
 	}
 	
-	//TO STRING
+	//TO_.STRING
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
