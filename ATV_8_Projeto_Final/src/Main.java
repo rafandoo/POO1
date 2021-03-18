@@ -126,5 +126,4 @@ public class Main {
 		} while (i != 6);
 		ent.close();
 	}
-
 }
