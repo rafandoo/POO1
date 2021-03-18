@@ -1,6 +1,5 @@
 import java.util.Scanner;
 
-import manp.xml.*;
 
 import classes.Cargo;
 import classes.ContaSalario;
@@ -8,7 +7,7 @@ import classes.Controle;
 import classes.Equipamentos;
 import classes.Funcionario;
 import classes.Setor;
-import classes.ListFuncionarios;
+
 import classes.Lista_funcionarios;
 
 import java.util.Iterator;
@@ -17,9 +16,7 @@ import java.util.List;
 public class Main {
 
 	public static void main(String[] args) {
-		
-		ListFuncionarios lf2 = new ListFuncionarios();
-		
+			
 		
 		Funcionario f;
 		ContaSalario cs;
@@ -54,7 +51,7 @@ public class Main {
 				cr.setS(s);
 				f.vincularCargoSetor(cr, s);
 				
-				lf2.addFunc(f);
+
 				c.cadastrarFuncionario(f);
 
 				i++;
@@ -74,7 +71,7 @@ public class Main {
 				cr.setS(s);
 				f.vincularCargoSetor(cr, s);
 				
-				lf2.addFunc(f);
+
 				c.cadastrarFuncionario(f);
 				
 				i++;
@@ -90,15 +87,6 @@ public class Main {
 				i++;
 				break;
 			case 5:
-				
-				ManipXML.gravarXMLCliente(lf2.getLista());	
-				List<Funcionario> list = ManipXML.lerXMLCOM();
-				
-				for (Iterator iter = list.iterator(); iter.hasNext();) {
-					Funcionario element = (Funcionario) iter.next();
-					System.out.println(element.toString() + "\n---");	
-				}
-				
 				i++;
 				break;
 			
