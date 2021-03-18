@@ -79,7 +79,6 @@ public class Funcionario extends Pessoa implements Login{
 
 	@Override
 	public String usuario() {
-		// TODO Auto-generated method stub
-		return null;
+		return Integer.toString(getMatricula());
 	}
 }
