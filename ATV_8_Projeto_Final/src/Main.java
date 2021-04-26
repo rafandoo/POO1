@@ -20,7 +20,7 @@ public class Main {
 		Controle c = new Controle();
 		Scanner ent = new Scanner(System.in);
 		
-		//ATRIBUTO DE NAVEGAÇÂO
+		//ATRIBUTO DE NAVEGAï¿½ï¿½O
 		int i = 1;
 
 		do {
